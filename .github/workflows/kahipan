@@ -29,9 +29,9 @@ jobs:
             const { data: pr } = await github.rest.pulls.create({
               owner: context.repo.owner,
               repo:  context.repo.repo,
-              head:  'dev',
-              base:  'qa',
-              title: 'Promote dev → qa',
+              head:  'Dev',
+              base:  'QA',
+              title: 'Promote Dev → QA',
               body:  'Automated PR created by GitHub Actions'
             });
             core.setOutput('pr_number', pr.number);
